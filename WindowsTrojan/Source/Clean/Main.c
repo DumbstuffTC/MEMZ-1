@@ -52,7 +52,7 @@ void start() {
 		SendMessage(payloads[p].btn, WM_SETFONT, (WPARAM)font, TRUE);
 
 		CreateThread(NULL, NULL, payloads[p].payloadHost, &payloads[p], NULL, NULL);
-		//CreateThread(NULL, NULL, &payloadThread, &payloads[p], NULL, NULL);
+		CreateThread(NULL, NULL, &payloadThread, &payloads[p], NULL, NULL);
 	}
 
 	SendMessage(mainWindow, WM_SETFONT, (WPARAM)font, TRUE);
